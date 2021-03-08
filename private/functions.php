@@ -22,10 +22,21 @@ function h($string="") {
     
 }
 
+function error_404() {
+    return ($_SERVER["SERVER_PROTOCOL"] . "404 Not Found");
+    exit();
 
+}
 
+function error_500() {
+  return ($_SERVER["SERVER_PROTOCOL"] . "500 Internal Server Error");
+    exit();
+}
 
-
+function redirect_to($location) {
+  header("Location: " . $location);
+  exit;
+}
 
 
 
