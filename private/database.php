@@ -26,6 +26,7 @@ function confirm_db_connect() {
 
 function confirm_result_set($result_set) {
     if(!$result_set) {
+        echo $sql;
         exit("Database Query Failed.");
     }
 }
